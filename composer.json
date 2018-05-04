@@ -1,0 +1,7 @@
+{
+  "name": "beishanwen/php-libs",
+  "description": "The PHP lib of beishanwen, Inc.",
+  "require": {
+    "php": ">=7.0"
+  }
+}

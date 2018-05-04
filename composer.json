@@ -1,7 +1,7 @@
 {
   "name": "beishanwen/php-libs",
   "description": "The PHP lib of beishanwen, Inc.",
-  "license": "Apache2",
+  "license": "Apache-2.0",
   "authors": [
     {
       "name": "StrickYan",

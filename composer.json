@@ -1,6 +1,13 @@
 {
   "name": "beishanwen/php-libs",
   "description": "The PHP lib of beishanwen, Inc.",
+  "license": "Apache2",
+  "authors": [
+    {
+      "name": "StrickYan",
+      "email": "beishanwen@gmail.com"
+    }
+  ],
   "require": {
     "php": ">=7.0"
   }

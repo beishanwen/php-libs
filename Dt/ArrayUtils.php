@@ -90,4 +90,37 @@ class ArrayUtils
         return true;
     }
 
+    /**
+     * @brief 二维数组排序
+     * @param $targetArr
+     * @param $key
+     * @param bool|false $isDesc
+     * @return mixed
+     */
+    public static function doubleDimensionalArraySort($targetArr, $key, $isDesc = false)
+    {
+        if ($isDesc) {
+            $sortType = 'SORT_DESC';
+        } else {
+            $sortType = 'SORT_ASC';
+        }
+        $sort = array(
+            'direction' => $sortType, // 排序顺序标志 SORT_DESC 降序；SORT_ASC 升序
+            'field' => $key,       // 排序字段
+        );
+
+        $arrSort = array();
+        foreach ($targetArr as $uniqid => $row) {
+            foreach ($row as $key => $value) {
+                $arrSort[$key][$uniqid] = $value;
+            }
+        }
+
+        if ($sort['direction']) {
+            array_multisort($arrSort[$sort['field']], constant($sort['direction']), $targetArr);
+        }
+
+        return $targetArr;
+    }
+
 }

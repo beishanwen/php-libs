@@ -1,7 +1,7 @@
 <?php
 /**
  * @file ArrayUtils.php
- * @author strickyan(beishanwen.com)
+ * @author strickyan@beishanwen.com
  * @date 2018/05/01 00:00:00
  * @brief 数组工具包
  */
@@ -92,6 +92,7 @@ class ArrayUtils
 
     /**
      * @brief 二维数组排序
+     * @author strickyan@beishanwen.com
      * @param $targetArr
      * @param $key
      * @param bool|false $isDesc
@@ -121,6 +122,38 @@ class ArrayUtils
         }
 
         return $targetArr;
+    }
+
+    /**
+     * @brief 根据权重随机抽样，weight值最大公约数最好为1（数组长度更小，性能更好），如 10,90 需简化为 1,9
+     * @author strickyan@beishanwen.com
+     * @param $data array 待抽样的数组
+     * @param $col_name string 权重字段名，字段值为整数
+     * @return array | boolean
+     */
+    public static function randomSelection($data, $col_name = 'weight')
+    {
+        $weight = 0;
+        $temp_data = array();
+        foreach ($data as $index => $one) {
+            $one['random_selection_index'] = $index; // 存储索引位置，以便删除该随机数组使用
+            if (isset($one[$col_name])) {
+                $weight += $one[$col_name];
+                for ($i = 0; $i < $one[$col_name]; $i++) {
+                    $temp_data[] = $one;
+                }
+            } else {
+                $weight += 1;
+                $temp_data[] = $one;
+            }
+        }
+        if (empty($temp_data)) {
+            return false;
+        }
+        $use = rand(0, $weight - 1);
+        $one = $temp_data[$use];
+        unset($temp_data);
+        return $one;
     }
 
 }

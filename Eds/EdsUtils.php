@@ -1,7 +1,7 @@
 <?php
 /**
  * @file EdsUtils.php
- * @author strickyan(beishanwen.com)
+ * @author strickyan@beishanwen.com
  * @date 2018/05/01 17:45:23
  * @brief 加密解密工具包
  */

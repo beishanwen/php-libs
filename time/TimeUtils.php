@@ -6,7 +6,7 @@
  * @brief 工具包
  */
 
-namespace beishanwen\php\libs\Time;
+namespace beishanwen\php\libs\time;
 
 class TimeUtils
 {

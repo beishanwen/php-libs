@@ -6,7 +6,7 @@
  * @brief 数组工具包
  */
 
-namespace beishanwen\php\libs\Dt;
+namespace beishanwen\php\libs\dt;
 
 class ArrayUtils
 {

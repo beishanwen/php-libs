@@ -13,12 +13,12 @@
  * 复用 TP 的验证码类，只是修改了 TP 的 session 方法为 $_SESSION
  */
 
-namespace beishanwen\php\libs\Verify;
+namespace beishanwen\php\libs\verify;
 
 // 定义当前请求的系统常量
 define('NOW_TIME', $_SERVER['REQUEST_TIME']);
 
-class VerifyUtils
+class verifyUtils
 {
     protected $config = array(
         'seKey' => 'ThinkPHP.CN',   // 验证码加密密钥
@@ -140,7 +140,7 @@ class VerifyUtils
         // 验证码字体随机颜色
         $this->_color = imagecolorallocate($this->_image, mt_rand(1, 150), mt_rand(1, 150), mt_rand(1, 150));
         // 验证码使用随机字体
-        $ttfPath = dirname(__FILE__) . '/Verify/' . ($this->useZh ? 'zhttfs' : 'ttfs') . '/';
+        $ttfPath = dirname(__FILE__) . '/verify/' . ($this->useZh ? 'zhttfs' : 'ttfs') . '/';
 
         if (empty($this->fontttf)) {
             $dir = dir($ttfPath);
@@ -284,7 +284,7 @@ class VerifyUtils
      */
     private function _background()
     {
-        $path = dirname(__FILE__) . '/Verify/bgs/';
+        $path = dirname(__FILE__) . '/verify/bgs/';
         $dir = dir($path);
 
         $bgs = array();

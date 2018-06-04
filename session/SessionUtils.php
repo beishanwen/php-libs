@@ -1,4 +1,10 @@
 <?php
+/***************************************************************************
+ *
+ * Copyright (c) 2018 beishanwen.com, Inc. All Rights Reserved
+ *
+ **************************************************************************/
+
 /**
  * @file SessionUtils.php
  * @author strickyan@beishanwen.com
@@ -90,5 +96,4 @@ class SessionUtils
         }
         return false;
     }
-
 }

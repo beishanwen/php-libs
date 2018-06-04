@@ -1,4 +1,10 @@
 <?php
+/***************************************************************************
+ *
+ * Copyright (c) 2018 beishanwen.com, Inc. All Rights Reserved
+ *
+ **************************************************************************/
+
 /**
  * @file TimeUtils.php
  * @author strickyan@beishanwen.com
@@ -10,7 +16,6 @@ namespace beishanwen\php\libs\time;
 
 class TimeUtils
 {
-
     /**
      * @brief 指定时区的日期转服务器所在时区时间戳
      * @author strickyan@beishanwen.com
@@ -50,5 +55,4 @@ class TimeUtils
         }
         return false;
     }
-
 }

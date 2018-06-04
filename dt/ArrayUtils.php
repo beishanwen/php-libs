@@ -1,4 +1,10 @@
 <?php
+/***************************************************************************
+ *
+ * Copyright (c) 2018 beishanwen.com, Inc. All Rights Reserved
+ *
+ **************************************************************************/
+
 /**
  * @file ArrayUtils.php
  * @author strickyan@beishanwen.com
@@ -10,7 +16,6 @@ namespace beishanwen\php\libs\dt;
 
 class ArrayUtils
 {
-
     /**
      * @brief 将数组里的某些元素，元素值为逗号隔开的字符串，转成数组格式
      * @author strickyan@beishanwen.com
@@ -155,5 +160,4 @@ class ArrayUtils
         unset($temp_data);
         return $one;
     }
-
 }

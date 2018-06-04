@@ -1,4 +1,10 @@
 <?php
+/***************************************************************************
+ *
+ * Copyright (c) 2018 beishanwen.com, Inc. All Rights Reserved
+ *
+ **************************************************************************/
+
 /**
  * @file EdsUtils.php
  * @author strickyan@beishanwen.com
@@ -72,5 +78,4 @@ class EdsUtils
             return $keyc . str_replace('=', '', base64_encode($result));
         }
     }
-
 }

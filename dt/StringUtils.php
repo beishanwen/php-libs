@@ -1,4 +1,10 @@
 <?php
+/***************************************************************************
+ *
+ * Copyright (c) 2018 beishanwen.com, Inc. All Rights Reserved
+ *
+ **************************************************************************/
+
 /**
  * @file StringUtils.php
  * @author strickyan@beishanwen.com
@@ -37,5 +43,4 @@ class StringUtils
 
         return $value;
     }
-
 }

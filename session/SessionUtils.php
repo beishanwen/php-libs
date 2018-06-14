@@ -64,7 +64,7 @@ class SessionUtils
      */
     public static function getSessionUserId()
     {
-        if (empty($_SESSION['user_id']) && false === self::cookieString2sessionInfo($_COOKIE[self::SESSION_COOKIE_NAME])) {
+        if (false === self::cookieString2sessionInfo($_COOKIE[self::SESSION_COOKIE_NAME])) {
             return null;
         }
         return $_SESSION['user_id'];
@@ -78,7 +78,7 @@ class SessionUtils
      */
     public static function getSessionUserName()
     {
-        if (empty($_SESSION['user_name']) && false === self::cookieString2sessionInfo($_COOKIE[self::SESSION_COOKIE_NAME])) {
+        if (false === self::cookieString2sessionInfo($_COOKIE[self::SESSION_COOKIE_NAME])) {
             return null;
         }
         return $_SESSION['user_name'];

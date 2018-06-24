@@ -12,9 +12,9 @@
  * @brief 工具包
  */
 
-namespace beishanwen\php\libs\session;
+namespace beishanwen\phplib\session;
 
-use beishanwen\php\libs\eds\EdsUtils;
+use beishanwen\phplib\eds\EdsUtils;
 
 class SessionUtils
 {

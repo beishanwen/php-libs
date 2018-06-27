@@ -14,6 +14,8 @@
 
 namespace beishanwen\phplib\dt;
 
+use beishanwen\phplib\math\GcdUtils;
+
 class ArrayUtils
 {
     /**
@@ -130,7 +132,7 @@ class ArrayUtils
     }
 
     /**
-     * @brief 根据权重随机抽样，weight值最大公约数最好为1（数组长度更小，性能更好），如 10,90 需简化为 1,9
+     * @brief 根据权重随机抽样
      * @author strickyan@beishanwen.com
      * @param $data array 待抽样的数组
      * @param $col_name string 权重字段名，字段值为整数
@@ -140,11 +142,22 @@ class ArrayUtils
     {
         $weight = 0;
         $temp_data = array();
+
+        // 得到最大公约数
+        $arr_weight = array_column($data, $col_name);
+        $max_common_divisor = GcdUtils::gcd_array($arr_weight);
+
         foreach ($data as $index => $one) {
             $one['random_selection_index'] = $index; // 存储索引位置，以便删除该随机数组使用
-            if (isset($one[$col_name])) {
-                $weight += $one[$col_name];
-                for ($i = 0; $i < $one[$col_name]; $i++) {
+            if ($max_common_divisor) {
+                // 对 weight 除以最大公约数，减小数组$temp_data大小
+                $one_weight = intval(intval($one[$col_name]) / $max_common_divisor);
+            } else {
+                $one_weight = intval($one[$col_name]);
+            }
+            if (isset($one_weight)) {
+                $weight += $one_weight;
+                for ($i = 0; $i < $one_weight; $i++) {
                     $temp_data[] = $one;
                 }
             } else {

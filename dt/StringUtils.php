@@ -7,7 +7,7 @@
 
 /**
  * @file StringUtils.php
- * @author strickyan@beishanwen.com
+ * @author strick@beishanwen.com
  * @date 2018/05/01 17:45:23
  * @brief 工具包
  */
@@ -18,7 +18,7 @@ class StringUtils
 {
     /**
      * @brief 防止 sql 注入
-     * @author strickyan@beishanwen.com
+     * @author strick@beishanwen.com
      * @param string $value
      * @return boolean
      */

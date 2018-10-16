@@ -7,7 +7,7 @@
 
 /**
  * @file ResponseUtils.php
- * @author strickyan@beishanwen.com
+ * @author strick@beishanwen.com
  * @date 2018/05/01 17:45:23
  * @brief
  */
@@ -37,7 +37,7 @@ class ResponseUtils
 
     /**
      * @brief 数组返回，统一必须有 errCode, errMsg, data三个字段
-     * @author strickyan@beishanwen.com
+     * @author strick@beishanwen.com
      * @param $errCode : 错误码
      * @param $data : 待返回的数据
      * @return array $ret

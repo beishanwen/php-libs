@@ -7,7 +7,7 @@
 
 /**
  * @file ServerUtils.php
- * @author strickyan@beishanwen.com
+ * @author strick@beishanwen.com
  * @date 2018/05/01 17:45:23
  * @brief $_SERVER 工具包
  */
@@ -18,7 +18,7 @@ class ServerUtils
 {
     /**
      * @brief 获取基础 url，http协议+域名+端口
-     * @author strickyan@beishanwen.com
+     * @author strick@beishanwen.com
      * @return string url
      */
     public static function getBaseUrl()

@@ -7,7 +7,7 @@
 
 /**
  * @file ArrayUtils.php
- * @author strickyan@beishanwen.com
+ * @author strick@beishanwen.com
  * @date 2018/05/01 00:00:00
  * @brief 数组工具包
  */
@@ -20,7 +20,7 @@ class ArrayUtils
 {
     /**
      * @brief 将数组里的某些元素，元素值为逗号隔开的字符串，转成数组格式
-     * @author strickyan@beishanwen.com
+     * @author strick@beishanwen.com
      * @param $arr
      * @param $keys
      * @return array
@@ -44,7 +44,7 @@ class ArrayUtils
 
     /**
      * @brief 检查数组里的某些元素是否为数字格式
-     * @author strickyan@beishanwen.com
+     * @author strick@beishanwen.com
      * @param $arr
      * @param $keys
      * @param $ignore_values
@@ -65,7 +65,7 @@ class ArrayUtils
 
     /**
      * @brief 检查数组里的某些元素是否为数组格式
-     * @author strickyan@beishanwen.com
+     * @author strick@beishanwen.com
      * @param $arr
      * @param $keys
      * @return boolean
@@ -82,7 +82,7 @@ class ArrayUtils
 
     /**
      * @brief 检查数组B是否包含 A
-     * @author strickyan@beishanwen.com
+     * @author strick@beishanwen.com
      * @param $arr_a
      * @param $arr_b
      * @return boolean
@@ -99,7 +99,7 @@ class ArrayUtils
 
     /**
      * @brief 二维数组排序
-     * @author strickyan@beishanwen.com
+     * @author strick@beishanwen.com
      * @param $targetArr
      * @param $key
      * @param bool|false $isDesc
@@ -133,7 +133,7 @@ class ArrayUtils
 
     /**
      * @brief 根据权重随机抽样
-     * @author strickyan@beishanwen.com
+     * @author strick@beishanwen.com
      * @param $data array 待抽样的数组
      * @param $col_name string 权重字段名，字段值为整数
      * @return array | boolean

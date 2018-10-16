@@ -7,7 +7,7 @@
 
 /**
  * @file SessionUtils.php
- * @author strickyan@beishanwen.com
+ * @author strick@beishanwen.com
  * @date 2018/05/01 17:45:23
  * @brief 工具包
  */
@@ -23,7 +23,7 @@ class SessionUtils
 
     /**
      * @desc 根据session生成分布式cookie，用户从一台机器A登录后，请求到另外一台机器B时需要用到这个cookie然后解密，然后把解密的session设置到B机器
-     * @author strickyan@beishanwen.com
+     * @author strick@beishanwen.com
      * @param $session_info
      * @return string $cookieStr
      */
@@ -38,7 +38,7 @@ class SessionUtils
 
     /**
      * @desc 根据算法把cookie string 解密成session 对应的用户信息
-     * @author strickyan@beishanwen.com
+     * @author strick@beishanwen.com
      * @param string $str_cookie
      * @return boolean | array $session_info
      */
@@ -69,7 +69,7 @@ class SessionUtils
 
     /**
      * @desc 获取函数cookieString2sessionInfo 解码出来的session info
-     * @author strickyan@beishanwen.com
+     * @author strick@beishanwen.com
      * @param null
      * @return boolean $session
      */
@@ -84,7 +84,7 @@ class SessionUtils
 
     /**
      * @desc 获取函数cookieString2sessionInfo 解码出来的session info
-     * @author strickyan@beishanwen.com
+     * @author strick@beishanwen.com
      * @param null
      * @return boolean $session
      */
@@ -99,7 +99,7 @@ class SessionUtils
 
     /**
      * @brief 检查是否登录
-     * @author strickyan@beishanwen.com
+     * @author strick@beishanwen.com
      * @param $user_id
      * @return boolean
      */

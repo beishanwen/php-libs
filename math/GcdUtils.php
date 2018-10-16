@@ -7,7 +7,7 @@
 
 /**
  * @file GcdUtils.php
- * @author strickyan@beishanwen.com
+ * @author strick@beishanwen.com
  * @date 2018/05/01 00:00:00
  * @brief 求最大公约数 库
  */
@@ -18,7 +18,7 @@ class GcdUtils
 {
     /**
      * @brief returns greatest common divisor between two numbers tested against gmp_gcd()
-     * @author strickyan@beishanwen.com
+     * @author strick@beishanwen.com
      * @param $a
      * @param $b
      * @return int
@@ -36,7 +36,7 @@ class GcdUtils
     /**
      *
      * @brief gets greatest common divisor among an array of numbers
-     * @author strickyan@beishanwen.com
+     * @author strick@beishanwen.com
      * @param $array
      * @param $a
      * @return int

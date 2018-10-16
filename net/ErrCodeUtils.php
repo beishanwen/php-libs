@@ -7,7 +7,7 @@
 
 /**
  * @file ErrCodeUtils.php
- * @author strickyan@beishanwen.com
+ * @author strick@beishanwen.com
  * @date 2018/05/01 17:45:23
  * @brief
  */
@@ -36,7 +36,7 @@ class ErrCodeUtils
 
     /**
      * @brief 通过错误码获取对应的错误信息
-     * @author strickyan@beishanwen.com
+     * @author strick@beishanwen.com
      * @param int $errCode
      * @return string $errMsg
      */

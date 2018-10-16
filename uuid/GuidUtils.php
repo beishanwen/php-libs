@@ -7,7 +7,7 @@
 
 /**
  * @brief GUID
- * @author strickyan@beishanwen.com
+ * @author strick@beishanwen.com
  * @date 2018/06/04
  */
 
@@ -17,7 +17,7 @@ class GuidUtils
 {
     /**
      * GUID
-     * @author strickyan@beishanwen.com
+     * @author strick@beishanwen.com
      * @param boolean $trim
      * @return string $guid
      */
@@ -58,7 +58,7 @@ class GuidUtils
 
     /**
      * guid
-     * @author strickyan@beishanwen.com
+     * @author strick@beishanwen.com
      * @param $trim
      * @return string url
      */

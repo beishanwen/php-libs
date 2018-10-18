@@ -16,22 +16,23 @@ namespace beishanwen\phplib\net;
 
 class ErrCodeUtils
 {
-    const SUCCESS = 200;
-    const UN_DEFINED_ERR_CODE = 404; // 错误码不存在
-    const SYSTEM_ERROR = 500;
+    const SUCCESS = 0;
+    const FAILED = 1;
+    const PARAMS_INVALID = 2;
+    const SYSTEM_ERROR = 3;
+    const UN_DEFINED_ERR_CODE = 999; // 错误码不存在
 
     // 项目错误码从1000开始，之前为系统保留错误码
-    const PARAMS_INVALID = 1001;
 
     /**
      * 错误码对应的错误信息变量
      */
     private static $errMsg = array(
         self::SUCCESS => 'success',
-        self::UN_DEFINED_ERR_CODE => 'undefined error code',
-        self::SYSTEM_ERROR => 'system busy',
-
+        self::FAILED => 'failed',
         self::PARAMS_INVALID => 'params invalid, check it please',
+        self::SYSTEM_ERROR => 'system busy',
+        self::UN_DEFINED_ERR_CODE => 'undefined error code',
     );
 
     /**
@@ -48,3 +49,4 @@ class ErrCodeUtils
         return false;
     }
 }
+

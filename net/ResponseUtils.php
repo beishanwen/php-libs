@@ -17,14 +17,23 @@ namespace beishanwen\phplib\net;
 class ResponseUtils
 {
     /**
-     * @brief json返回，统一必须有 errCode, errMsg, data三个字段
-     * @param $arrayRet : 待返回的数据
+     * @brief json返回，统一必须有 code, msg, data 三个字段
+     * @param $code : 错误码
+     * @param $data : 待返回的数据
+     * @param $msg : 错误信息
      * @return string json json格式字符串
      */
-    public static function json($arrayRet)
+    public static function json($code, $data = array(), $msg = '')
     {
-        $ret = json_encode($arrayRet);
-
+        if (empty($msg)) {
+            $msg = ErrCodeUtils::getErrMsg($code);
+        }
+        $ret = array(
+            'code' => $code,
+            'msg' => $msg,
+            'data' => $data,
+        );
+        $ret = json_encode($ret);
         if (!empty($_GET['callback'])) {
             // jsonp
             echo $_GET['callback'] . '(' . $ret . ')';
@@ -36,24 +45,27 @@ class ResponseUtils
     }
 
     /**
-     * @brief 数组返回，统一必须有 errCode, errMsg, data三个字段
+     * @brief 数组返回，统一必须有 code, msg, data 三个字段
      * @author strick@beishanwen.com
-     * @param $errCode : 错误码
+     * @param $code : 错误码
      * @param $data : 待返回的数据
+     * @param $msg : 错误信息
      * @return array $ret
      */
-    public static function arrayRet($errCode, $data = array())
+    public static function arrayRet($code, $data = array(), $msg = '')
     {
-        $errMsg = ErrCodeUtils::getErrMsg($errCode);
-        if (false === $errMsg) {
-            // Bingo_Log::fatal("errCode is not defined. errCode[" . $errCode . "]");
-            $errCode = ErrCodeUtils::UN_DEFINED_ERR_CODE;
-            $errMsg = ErrCodeUtils::getErrMsg($errCode);
+        if (empty($msg)) {
+            $msg = ErrCodeUtils::getErrMsg($code);
+        }
+        if (false === $msg) {
+            // Bingo_Log::fatal("error code is not defined, data[" . $code . "]");
+            $code = ErrCodeUtils::UN_DEFINED_ERR_CODE;
+            $msg = ErrCodeUtils::getErrMsg($code);
             $data = array();
         }
         $ret = array(
-            'errCode' => $errCode,
-            'errMsg' => $errMsg,
+            'code' => $code,
+            'msg' => $msg,
             'data' => $data,
         );
         return $ret;

@@ -12,7 +12,7 @@
  * @brief 加密解密工具包
  */
 
-namespace beishanwen\phplib\eds;
+namespace beishanwen\phplib\crypt;
 
 class Rc4Utils
 {

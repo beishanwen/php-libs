@@ -14,7 +14,7 @@
 
 namespace beishanwen\phplib\session;
 
-use beishanwen\phplib\eds\EdsUtils;
+use beishanwen\phplib\crypt\Rc4Utils;
 
 class SessionUtils
 {
@@ -32,7 +32,7 @@ class SessionUtils
         $user_id = $session_info['user_id'];
         $user_name = $session_info['user_name'];
         $str = $user_id . '#' . $user_name;
-        $new_str = EdsUtils::authCode($str, "ENCODE", EdsUtils::KEY, self::SESSION_COOKIE_EXPIRE);
+        $new_str = Rc4Utils::rc4($str, "ENCODE", Rc4Utils::KEY, self::SESSION_COOKIE_EXPIRE);
         return $new_str;
     }
 
@@ -48,7 +48,7 @@ class SessionUtils
             return false;
         }
 
-        $str = EdsUtils::authCode($str_cookie, "DECODE", EdsUtils::KEY);
+        $str = Rc4Utils::rc4($str_cookie, "DECODE", Rc4Utils::KEY);
         $arr = explode('#', $str);
         if (count($arr) != 2) {
             return false;

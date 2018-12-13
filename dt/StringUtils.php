@@ -43,4 +43,28 @@ class StringUtils
 
         return $value;
     }
+
+    /**
+     * @brief
+     * @author strick@beishanwen.com
+     * @param string $str
+     * @param string $needle
+     * @param $offset
+     * @param $n ,第几次出现的位置
+     * @return int | boolean
+     */
+    public static function strpos($str, $needle, $offset = 0, $n = 1)
+    {
+        $pos = strpos($str, $needle, $offset);
+        if (false === $pos) {
+            return false;
+        }
+        for ($i = 1; $i < $n; $i++) {
+            $pos = strpos($str, $needle, $pos + 1);
+            if (false === $pos) {
+                return false;
+            }
+        }
+        return $pos;
+    }
 }
